@@ -192,8 +192,9 @@ function sortByMarks() {
 // Function to show only passing students
 function showPassing() {
     const passingData = data.filter(item => item.passing);
-    data.push(...passingData);
-    updateTable();
+            data.length = 0;
+            data.push(...passingData);
+            updateTable();
     
     document.querySelector('table').style.display = 'table';
     document.getElementById('female-table-container').style.display = 'none';
